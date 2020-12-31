@@ -1,8 +1,8 @@
 <script>
-	import { Router, Link, Route } from "svelte-routing";
+	import { Router, Route } from "svelte-routing";
 
 	// components
-	import Header from "./components/Header.svelte";
+	import Sidebar from "./components/Sidebar.svelte";
 	import Body from "./components/Body.svelte";
 
 	// pages
@@ -14,18 +14,12 @@
 
 <style>
 	main {
-		padding-top: 180px;
-		z-index: -1;
+		padding-left: 25%;
 	}
 </style>
 
 <Router {url}>
-	<Header>
-		<div slot="links">
-			<Link to="/">Home</Link>
-			<Link to="cv">CV</Link>
-		</div>
-	</Header>
+	<Sidebar />
 	<main>
 		<Body>
 			<div slot="content">
