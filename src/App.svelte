@@ -2,7 +2,7 @@
 	import { Router, Route } from "svelte-routing";
 
 	// components
-	import Sidebar from "./components/Sidebar.svelte";
+	import Navigationbar from "./components/NavigationBar.svelte";
 	import Body from "./components/Body.svelte";
 
 	// pages
@@ -13,13 +13,10 @@
 </script>
 
 <style>
-	main {
-		padding-left: 25%;
-	}
 </style>
 
 <Router {url}>
-	<Sidebar />
+	<Navigationbar />
 	<main>
 		<Body>
 			<div slot="content">

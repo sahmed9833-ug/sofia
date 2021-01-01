@@ -1,14 +1,45 @@
 <script>
+    import MediaQuery from "svelte-media-query";
 </script>
 
 <style>
-    div {
+    div.desktop {
         position: relative;
-        width: 60%;
-        margin: 0 auto;
+        margin-left: 25%;
+    }
+
+    div.tablet {
+        margin-left: 25%;
+    }
+
+    div.mobile {
+        margin-top: 75px;
+        padding-top: 3%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
 </style>
 
-<div>
-    <slot name="content" />
-</div>
+<MediaQuery query="(min-width: 1281px)" let:matches>
+    {#if matches}
+        <div class="desktop">
+            <slot name="content" />
+        </div>
+    {/if}
+</MediaQuery>
+
+<MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
+    {#if matches}
+        <div class="tablet">
+            <slot name="content" />
+        </div>
+    {/if}
+</MediaQuery>
+
+<MediaQuery query="(max-width: 480px)" let:matches>
+    {#if matches}
+        <div class="mobile">
+            <slot name="content" />
+        </div>
+    {/if}
+</MediaQuery>
