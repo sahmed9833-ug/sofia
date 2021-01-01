@@ -3,7 +3,9 @@
 
 <style>
     div {
-        height: 10%;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
         padding: 0;
     }
     p {

@@ -3,14 +3,9 @@
 </script>
 
 <style>
-    nav {
-        height: 60%;
-    }
     ul {
-        width: 50%;
-        margin-left: 17.5%;
-        padding-left: 30px;
-        padding-right: 30px;
+        width: 100%;
+        padding: 0;
         list-style-type: none;
     }
     li {
@@ -18,7 +13,8 @@
         margin-top: 10px;
     }
     hr {
-        border-top: 1px solid rgb(90, 50, 0);
+        width: 65%;
+        border-top: 1px solid rgb(158, 129, 94);
         border-bottom: none;
     }
     a {
