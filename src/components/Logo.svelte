@@ -1,27 +1,53 @@
 <script>
+    import { Router, link } from "svelte-routing";
     import MediaQuery from "svelte-media-query";
 </script>
 
 <style>
     div {
-        height: 30%;
+        margin: auto;
+
+        /* placeholder styling */
+        border-radius: 50%;
+        background-color: blue;
+        color: white;
+        text-align: center;
+    }
+    div.desktop {
+        height: 300px;
+        width: 300px;
+    }
+    div.tablet {
+        height: 150px;
+        width: 90%;
     }
     div.mobile {
-        height: 100%;
+        height: 75px;
+        width: 75px;
         display: block;
         float: left;
-        width: 75px;
     }
 </style>
 
-<MediaQuery query="(min-width: 481px)" let:matches>
-    {#if matches}
-        <div />
-    {/if}
-</MediaQuery>
+<Router>
+    <MediaQuery query="(min-width: 1281px)" let:matches>
+        {#if matches}
+            <a href="/" use:link>
+                <div class="desktop" /></a>
+        {/if}
+    </MediaQuery>
 
-<MediaQuery query="(max-width: 480px)" let:matches>
-    {#if matches}
-        <div class="mobile" />
-    {/if}
-</MediaQuery>
+    <MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
+        {#if matches}
+            <a href="/" use:link>
+                <div class="tablet" /></a>
+        {/if}
+    </MediaQuery>
+
+    <MediaQuery query="(max-width: 480px)" let:matches>
+        {#if matches}
+            <a href="/" use:link>
+                <div class="mobile" /></a>
+        {/if}
+    </MediaQuery>
+</Router>

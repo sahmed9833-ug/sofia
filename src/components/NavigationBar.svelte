@@ -4,6 +4,8 @@
     import Logo from "./Logo.svelte";
     import NavigationItems from "./NavigationItems.svelte";
     import Footer from "./Footer.svelte";
+
+    let showingItems = false;
 </script>
 
 <style>
@@ -22,6 +24,19 @@
         width: 100%;
         height: 75px;
         top: 0;
+        border-bottom: 2px solid rgb(158, 129, 94);
+        z-index: 99;
+    }
+    button {
+        height: 50px;
+        width: 90px;
+        margin-top: 13px;
+        margin-right: 13px;
+        float: right;
+        background-color: bisque;
+        color: rgb(90, 50, 0);
+        font-weight: 700;
+        border: 3px solid rgba(90, 50, 0, 0.8);
     }
 </style>
 
@@ -49,7 +64,9 @@
     {#if matches}
         <div class="top">
             <Logo />
-            <NavigationItems />
+            <button
+                on:click={(e) => (showingItems = !showingItems)}>Menu</button>
         </div>
+        <NavigationItems bind:showing={showingItems} />
     {/if}
 </MediaQuery>

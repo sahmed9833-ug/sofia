@@ -1,6 +1,9 @@
 <script>
+    import { fly } from "svelte/transition";
     import { Router, links } from "svelte-routing";
     import MediaQuery from "svelte-media-query";
+
+    export let showing;
 </script>
 
 <style>
@@ -11,20 +14,22 @@
     }
     ul.mobile {
         margin: 0;
-        height: 100%;
+        position: fixed;
+        background-color: bisque;
+        z-index: 98;
     }
     li {
         height: 30px;
         margin-top: 10px;
     }
     li.mobile {
-        display: inline-block;
-        width: 100px;
-        height: 100%;
+        width: 100%;
+        height: 60px;
         margin: 0;
+        border-bottom: 1px solid rgba(90, 50, 0, 0.3);
     }
     hr {
-        width: 65%;
+        width: 35%;
         border-top: 1px solid rgb(158, 129, 94);
         border-bottom: none;
     }
@@ -37,8 +42,8 @@
     }
     a.mobile {
         width: 100%;
-        height: 60px;
-        padding-top: 15px;
+        height: 45px;
+        padding-top: 23px;
         font-size: medium;
         font-family: "Montserrat", sans-serif;
     }
@@ -46,9 +51,7 @@
     a.mobile:hover {
         background-color: rgb(90, 50, 0);
         color: bisque;
-    }
-    i {
-        font-size: xx-large;
+        text-decoration: none;
     }
 </style>
 
@@ -56,27 +59,31 @@
     {#if matches}
         <uL use:links>
             <Router>
-                <li><a href="/">Home </a></li>
+                <li><a href="about">About</a></li>
                 <hr />
                 <li><a href="cv">CV </a></li>
+                <hr />
+                <li><a href="projects">Projects</a></li>
             </Router>
         </uL>
     {/if}
 </MediaQuery>
 
 <MediaQuery query="(max-width: 480px)" let:matches>
-    {#if matches}
-        <uL class="mobile" use:links>
+    {#if matches && showing}
+        <uL
+            class="mobile"
+            use:links
+            in:fly={{ y: -200, duration: 200 }}
+            out:fly={{ y: -200, duration: 200 }}
+            on:click={(e) => (showing = false)}>
             <Router>
                 <li class="mobile">
-                    <a class="mobile" href="/"><i
-                            class="las la-home" /><br />Home
-                    </a>
+                    <a class="mobile" href="about">About </a>
                 </li>
+                <li class="mobile"><a class="mobile" href="cv">CV </a></li>
                 <li class="mobile">
-                    <a class="mobile" href="cv"><i
-                            class="las la-file-alt" /><br />CV
-                    </a>
+                    <a class="mobile" href="projects">Projects </a>
                 </li>
             </Router>
         </uL>
