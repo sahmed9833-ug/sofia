@@ -67,7 +67,7 @@
 <MediaQuery query="(max-width: 480px)" let:matches>
     {#if matches}
         <div class="top">
-            <Logo on:logoClick={(e) => (showingItems = !showingItems)} />
+            <Logo on:logoClick={(e) => (showingItems = false)} />
             <button
                 on:click={(e) => (showingItems = !showingItems)}>Menu</button>
         </div>
