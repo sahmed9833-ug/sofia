@@ -1,6 +1,13 @@
 <script>
+    import { createEventDispatcher } from "svelte";
     import { Router, link } from "svelte-routing";
     import MediaQuery from "svelte-media-query";
+
+    const dispatch = createEventDispatcher();
+
+    function dispatchLogoClick() {
+        dispatch("logoClick");
+    }
 </script>
 
 <style>
@@ -46,7 +53,7 @@
 
     <MediaQuery query="(max-width: 480px)" let:matches>
         {#if matches}
-            <a href="/" use:link>
+            <a href="/" use:link on:click={dispatchLogoClick}>
                 <div class="mobile" /></a>
         {/if}
     </MediaQuery>

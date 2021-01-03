@@ -1,5 +1,5 @@
 <script>
-    import { fly } from "svelte/transition";
+    import { fly, fade } from "svelte/transition";
     import { Router, links } from "svelte-routing";
     import MediaQuery from "svelte-media-query";
 
@@ -49,9 +49,16 @@
     }
     a.mobile:active,
     a.mobile:hover {
-        background-color: rgb(90, 50, 0);
+        background-color: rgb(184, 149, 107);
         color: bisque;
         text-decoration: none;
+    }
+
+    div {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
 
@@ -74,8 +81,8 @@
         <uL
             class="mobile"
             use:links
-            in:fly={{ y: -200, duration: 200 }}
-            out:fly={{ y: -200, duration: 200 }}
+            in:fly={{ y: -200, duration: 300 }}
+            out:fly={{ y: -200, duration: 300 }}
             on:click={(e) => (showing = false)}>
             <Router>
                 <li class="mobile">
@@ -87,5 +94,6 @@
                 </li>
             </Router>
         </uL>
+        <div in:fade={{ duration: 200 }} out:fade={{ duration: 200 }} />
     {/if}
 </MediaQuery>

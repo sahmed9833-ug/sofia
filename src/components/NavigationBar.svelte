@@ -24,7 +24,7 @@
         width: 100%;
         height: 75px;
         top: 0;
-        border-bottom: 2px solid rgb(158, 129, 94);
+        border-bottom: 3px solid rgba(90, 50, 0, 0.8);
         z-index: 99;
     }
     button {
@@ -37,6 +37,10 @@
         color: rgb(90, 50, 0);
         font-weight: 700;
         border: 3px solid rgba(90, 50, 0, 0.8);
+    }
+    button:active {
+        background-color: rgb(184, 149, 107);
+        color: bisque;
     }
 </style>
 
@@ -63,7 +67,7 @@
 <MediaQuery query="(max-width: 480px)" let:matches>
     {#if matches}
         <div class="top">
-            <Logo />
+            <Logo on:logoClick={(e) => (showingItems = !showingItems)} />
             <button
                 on:click={(e) => (showingItems = !showingItems)}>Menu</button>
         </div>
