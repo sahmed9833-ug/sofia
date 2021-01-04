@@ -59,6 +59,7 @@
         width: 100%;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.5);
+        z-index: 95;
     }
 </style>
 
@@ -81,9 +82,9 @@
         <uL
             class="mobile"
             use:links
+            on:click={() => (showing = false)}
             in:fly={{ y: -200, duration: 300 }}
-            out:fly={{ y: -200, duration: 300 }}
-            on:click={(e) => (showing = false)}>
+            out:fly={{ y: -200, duration: 300 }}>
             <Router>
                 <li class="mobile">
                     <a class="mobile" href="about">About </a>
@@ -94,6 +95,9 @@
                 </li>
             </Router>
         </uL>
-        <div in:fade={{ duration: 200 }} out:fade={{ duration: 200 }} />
+        <div
+            on:click={() => (showing = false)}
+            in:fade={{ duration: 200 }}
+            out:fade={{ duration: 200 }} />
     {/if}
 </MediaQuery>

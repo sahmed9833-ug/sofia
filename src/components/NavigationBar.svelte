@@ -6,6 +6,8 @@
     import Footer from "./Footer.svelte";
 
     let showingItems = false;
+
+    $: menuButtonClass = showingItems ? "active" : "";
 </script>
 
 <style>
@@ -38,9 +40,10 @@
         font-weight: 700;
         border: 3px solid rgba(90, 50, 0, 0.8);
     }
-    button:active {
+    button:active,
+    button.active {
         background-color: rgb(184, 149, 107);
-        color: bisque;
+        color: rgb(90, 50, 0);
     }
 </style>
 
@@ -69,6 +72,7 @@
         <div class="top">
             <Logo on:logoClick={(e) => (showingItems = false)} />
             <button
+                class={menuButtonClass}
                 on:click={(e) => (showingItems = !showingItems)}>Menu</button>
         </div>
         <NavigationItems bind:showing={showingItems} />
