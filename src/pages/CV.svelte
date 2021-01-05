@@ -8,18 +8,10 @@
 </script>
 
 <style>
-    div {
-        text-align: center;
-    }
-    h1 {
-        text-transform: uppercase;
-        font-size: 3em;
-        font-weight: 100;
-    }
 </style>
 
 <div>
-    <h1>CV goes here</h1>
+    <h1>CV</h1>
 
     <h2>Skills</h2>
     <ul>

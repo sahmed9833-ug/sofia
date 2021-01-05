@@ -18,6 +18,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+h1 {
+  font-family: "Martel", serif;
+  color: rgb(90, 50, 0);
+}
+
 a {
   color: rgb(0, 100, 200);
   text-decoration: none;

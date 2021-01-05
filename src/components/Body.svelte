@@ -3,20 +3,18 @@
 </script>
 
 <style>
+    div {
+        margin: 0 auto;
+    }
     div.desktop {
-        position: relative;
-        margin-left: 25%;
+        width: 75%;
     }
-
     div.tablet {
-        margin-left: 25%;
+        width: 85%;
     }
-
     div.mobile {
-        margin-top: 75px;
-        padding-top: 3%;
-        padding-left: 3%;
-        padding-right: 3%;
+        width: 90%;
+        padding-top: 10px;
     }
 </style>
 

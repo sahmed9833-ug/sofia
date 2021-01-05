@@ -4,6 +4,13 @@
     import MediaQuery from "svelte-media-query";
 
     export let showing;
+
+    let navItems = [
+        { route: "about", text: "About" },
+        { route: "cv", text: "CV" },
+        { route: "projects", text: "Projects" },
+        { route: "blog", text: "Blog" },
+    ];
 </script>
 
 <style>
@@ -67,11 +74,12 @@
     {#if matches}
         <uL use:links>
             <Router>
-                <li><a href="about">About</a></li>
-                <hr />
-                <li><a href="cv">CV </a></li>
-                <hr />
-                <li><a href="projects">Projects</a></li>
+                {#each navItems as item, i}
+                    <li><a href={item.route}>{item.text}</a></li>
+                    {#if i !== navItems.length - 1}
+                        <hr />
+                    {/if}
+                {/each}
             </Router>
         </uL>
     {/if}
@@ -86,13 +94,11 @@
             in:fly={{ y: -200, duration: 300 }}
             out:fly={{ y: -200, duration: 300 }}>
             <Router>
-                <li class="mobile">
-                    <a class="mobile" href="about">About </a>
-                </li>
-                <li class="mobile"><a class="mobile" href="cv">CV </a></li>
-                <li class="mobile">
-                    <a class="mobile" href="projects">Projects </a>
-                </li>
+                {#each navItems as item}
+                    <li class="mobile">
+                        <a class="mobile" href={item.route}>{item.text}</a>
+                    </li>
+                {/each}
             </Router>
         </uL>
         <div

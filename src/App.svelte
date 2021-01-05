@@ -12,14 +12,28 @@
 	import About from "./pages/About.svelte";
 	import CV from "./pages/CV.svelte";
 	import Projects from "./pages/Projects.svelte";
+	import Blog from "./pages/Blog.svelte";
 
 	export let url = "";
+
+	let pages = [
+		{ path: "/", component: Home },
+		{ path: "about", component: About },
+		{ path: "cv", component: CV },
+		{ path: "projects", component: Projects },
+		{ path: "blog", component: Blog },
+	];
 </script>
 
 <style>
 	main {
 		position: relative;
 		min-height: 100%;
+		margin-left: 25%;
+	}
+	main.mobile {
+		margin-left: 0;
+		margin-top: 74px;
 	}
 </style>
 
@@ -30,10 +44,11 @@
 			<main>
 				<Body>
 					<div slot="content">
-						<Route path="/" component={Home} />
-						<Route path="about" component={About} />
-						<Route path="cv" component={CV} />
-						<Route path="projects" component={Projects} />
+						{#each pages as page}
+							<Route
+								path={page.path}
+								component={page.component} />
+						{/each}
 					</div>
 				</Body>
 			</main>
@@ -43,13 +58,14 @@
 	<MediaQuery query="(max-width: 480px)" let:matches>
 		{#if matches}
 			<NavigationBar />
-			<main>
+			<main class="mobile">
 				<Body>
 					<div slot="content">
-						<Route path="/" component={Home} />
-						<Route path="about" component={About} />
-						<Route path="cv" component={CV} />
-						<Route path="projects" component={Projects} />
+						{#each pages as page}
+							<Route
+								path={page.path}
+								component={page.component} />
+						{/each}
 					</div>
 				</Body>
 			</main>

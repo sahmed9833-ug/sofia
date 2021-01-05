@@ -27,7 +27,7 @@
     }
 </style>
 
-<MediaQuery query="(min-width: 481px)" let:matches>
+<MediaQuery query="(min-width: 481px) and (min-height: 450px)" let:matches>
     {#if matches}
         <div>
             <p>

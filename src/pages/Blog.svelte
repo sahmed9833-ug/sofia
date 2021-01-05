@@ -6,6 +6,6 @@
 </style>
 
 <main>
-    <h1>Projects</h1>
+    <h1>Blog</h1>
     {currentDate}
 </main>
