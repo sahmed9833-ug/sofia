@@ -12,7 +12,6 @@
 	import About from "./pages/About.svelte";
 	import CV from "./pages/CV.svelte";
 	import Projects from "./pages/Projects.svelte";
-	import Blog from "./pages/Blog.svelte";
 
 	export let url = "";
 
@@ -21,7 +20,6 @@
 		{ path: "about", component: About },
 		{ path: "cv", component: CV },
 		{ path: "projects", component: Projects },
-		{ path: "blog", component: Blog },
 	];
 </script>
 

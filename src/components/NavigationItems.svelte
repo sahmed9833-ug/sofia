@@ -9,7 +9,6 @@
         { route: "about", text: "About" },
         { route: "cv", text: "CV" },
         { route: "projects", text: "Projects" },
-        { route: "blog", text: "Blog" },
     ];
 </script>
 
