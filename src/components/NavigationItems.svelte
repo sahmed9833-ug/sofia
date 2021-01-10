@@ -36,8 +36,6 @@
     }
     hr {
         width: 35%;
-        border-top: 1px solid rgb(158, 129, 94);
-        border-bottom: none;
     }
     a {
         display: block;

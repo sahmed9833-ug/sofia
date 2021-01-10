@@ -12,15 +12,26 @@ body {
 }
 
 body {
-  color: #333;
+  color: rgb(90, 50, 0);
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: "Martel", serif;
   color: rgb(90, 50, 0);
+}
+
+h3 {
+  font-size: larger;
+}
+
+hr {
+  border-top: 1px solid rgb(158, 129, 94);
+  border-bottom: none;
 }
 
 a {

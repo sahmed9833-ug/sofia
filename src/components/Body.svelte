@@ -5,6 +5,7 @@
 <style>
     div {
         margin: 0 auto;
+        padding-top: 100px;
     }
     div.desktop {
         width: 75%;
