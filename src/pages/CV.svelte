@@ -3,7 +3,7 @@
     import { collectionData } from "rxfire/firestore";
     import { startWith } from "rxjs/operators";
 
-    const skillsCollection = db.collection("skills");
+    const skillsCollection = db.collection("skills").orderBy("title");
     const skills = collectionData(skillsCollection, "id").pipe(startWith([]));
 
     const experienceCollection = db
@@ -43,13 +43,28 @@
         margin-bottom: 0px;
     }
     span {
-        color: rgba(90, 50, 0, 0.7);
+        color: rgba(90, 50, 0, 0.6);
     }
     hr {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px 10px;
+        background-color: burlywood;
+        border: 1px solid rgba(90, 50, 0, 0.7);
+    }
 </style>
+
+<svelte:head>
+    <title>CV - saeed (final name pending)</title>
+</svelte:head>
 
 <div>
     <h1>CV</h1>
