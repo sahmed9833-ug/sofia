@@ -12,13 +12,13 @@
 
 <style>
     div {
+        background-image: url("https://i.imgur.com/pDLkY1x.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         margin: auto;
-
-        /* placeholder styling */
-        border-radius: 50%;
-        background-color: blue;
-        color: white;
-        text-align: center;
+        margin-top: 25px;
+        transition: all 0.2s ease-out;
     }
     div.desktop {
         height: 300px;
@@ -29,10 +29,17 @@
         width: 90%;
     }
     div.mobile {
-        height: 75px;
-        width: 75px;
+        height: 80px;
+        width: 80px;
         display: block;
         float: left;
+        margin-left: 13px;
+        margin-top: 11px;
+    }
+
+    div:hover,
+    div:active {
+        transform: scale(1.02);
     }
 </style>
 

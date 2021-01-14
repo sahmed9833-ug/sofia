@@ -6,7 +6,7 @@
 </style>
 
 <svelte:head>
-    <title>Projects - saeed (final name pending)</title>
+    <title>Projects - Saeed Ahmed</title>
 </svelte:head>
 
 <main>

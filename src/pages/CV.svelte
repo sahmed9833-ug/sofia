@@ -63,7 +63,7 @@
 </style>
 
 <svelte:head>
-    <title>CV - saeed (final name pending)</title>
+    <title>CV - Saeed Ahmed</title>
 </svelte:head>
 
 <div>
