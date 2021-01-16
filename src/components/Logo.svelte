@@ -40,7 +40,7 @@
     background-position: center;
     margin: auto;
     margin-top: 25px;
-    transition: all 0.2s ease-out;
+    transition: 0.2s ease-out;
   }
   div.desktop {
     height: 300px;
