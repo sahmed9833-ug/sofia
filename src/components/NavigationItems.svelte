@@ -80,8 +80,8 @@
     display: block;
     font-family: "Martel", serif;
     font-size: large;
+    font-weight: unset;
     text-align: center;
-    color: rgb(90, 50, 0);
   }
   a.mobile {
     width: 100%;

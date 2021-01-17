@@ -1,5 +1,4 @@
 <script>
-  const currentDate = new Date();
 </script>
 
 <svelte:head>
@@ -8,7 +7,7 @@
 
 <main>
   <h1>About</h1>
-  {currentDate}
+  <p>Developer, coffee-drinker, avid clothes-wearer.</p>
 </main>
 
 <style>

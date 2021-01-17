@@ -48,6 +48,7 @@
     color: rgb(90, 50, 0);
   }
   a {
+    font-weight: unset;
     color: rgb(90, 50, 0);
   }
   p.notes {

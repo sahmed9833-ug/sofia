@@ -41,12 +41,14 @@
       <ul>
         {#each $projects as project}
           <li class="mobile">
-            <img src={project.image} alt={project.title} />
-            <div class="text">
-              <p><strong>{project.title}</strong></p>
-              <hr />
-              <p>{project.description}</p>
-            </div>
+            <a href={project.url}>
+              <img src={project.image} alt={project.title} />
+              <div class="text">
+                <p><strong>{project.title}</strong></p>
+                <hr />
+                <p>{project.description}</p>
+              </div>
+            </a>
           </li>
         {/each}
       </ul>
@@ -85,18 +87,19 @@
 
   a {
     text-decoration: none;
-    color: rgb(90, 50, 0);
+    font-weight: unset;
   }
 
   img {
     width: 100%;
     height: 70%;
+    display: block;
   }
 
   div.text {
     width: 100%;
     height: 30%;
-    padding-top: 5px;
+    padding-top: 10px;
     border-top: 1px solid rgb(90, 50, 0);
   }
   p {
