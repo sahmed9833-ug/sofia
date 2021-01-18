@@ -7,7 +7,7 @@
 
 <main>
   <h1>About</h1>
-  <p>Developer, coffee-drinker, avid clothes-wearer.</p>
+  <p>Developer, coffee-drinker, avid thing-doer.</p>
 </main>
 
 <style>
