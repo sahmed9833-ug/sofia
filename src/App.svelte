@@ -8,17 +8,18 @@
   import Footer from "./components/Footer.svelte";
 
   // pages
-  import Home from "./pages/Home.svelte";
   import About from "./pages/About.svelte";
   import CV from "./pages/CV.svelte";
   import Projects from "./pages/Projects.svelte";
+  import Skills from "./pages/Skills.svelte";
 
   export let url = "";
 
   let pages = [
-    { path: "/", component: Home },
+    { path: "/", component: CV },
     { path: "about", component: About },
     { path: "cv", component: CV },
+    { path: "skills", component: Skills},
     { path: "projects", component: Projects },
   ];
 </script>

@@ -1,4 +1,5 @@
 <script>
+  import { WEBSITE_NAME } from "../constants";
   import { db } from "../../firebase.js";
   import { collectionData } from "rxfire/firestore";
   import { startWith } from "rxjs/operators";
@@ -21,7 +22,7 @@
   );
 
   function getDateFromTimestamp(timestamp) {
-    if (timestamp >= 315506361600.0) {
+    if (timestamp === null) {
       return "Present";
     }
 
@@ -33,18 +34,11 @@
 </script>
 
 <svelte:head>
-  <title>CV - Saeed Ahmed</title>
+  <title>CV - {WEBSITE_NAME}</title>
 </svelte:head>
 
 <div>
   <h1>CV</h1>
-  <hr />
-  <h2>Skills</h2>
-  <ul>
-    {#each $skills as skill}
-      <li>{skill.title}</li>
-    {/each}
-  </ul>
   <hr />
   <h2>Experience</h2>
   {#each $experience as job}
@@ -97,16 +91,5 @@
   hr {
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px 10px;
-    background-color: burlywood;
-    border: 1px solid rgba(90, 50, 0, 0.7);
   }
 </style>

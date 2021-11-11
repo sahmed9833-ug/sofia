@@ -8,6 +8,7 @@
   let navItems = [
     { route: "about", text: "About" },
     { route: "cv", text: "CV" },
+    { route: "skills", text: "Skills" },
     { route: "projects", text: "Projects" },
   ];
 </script>

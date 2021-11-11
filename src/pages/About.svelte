@@ -1,13 +1,14 @@
 <script>
+  import { WEBSITE_NAME } from "../constants";
 </script>
 
 <svelte:head>
-  <title>About - Saeed Ahmed</title>
+  <title>About - {WEBSITE_NAME}</title>
 </svelte:head>
 
 <main>
   <h1>About</h1>
-  <p>Developer, coffee-drinker, avid thing-doer.</p>
+  <p>...</p>
 </main>
 
 <style>

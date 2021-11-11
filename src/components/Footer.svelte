@@ -11,7 +11,7 @@
         <a href="https://www.linkedin.com/in/saeed-ahmed-849965150/">LinkedIn</a
         >
       </p>
-      <p class="notes">Saeed Ahmed &#169; 2021</p>
+      <p class="notes">Sofia Ahmed &#169; 2021</p>
     </div>
   {/if}
 </MediaQuery>

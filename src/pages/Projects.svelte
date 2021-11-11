@@ -1,5 +1,6 @@
 <script>
   import MediaQuery from "svelte-media-query";
+  import { WEBSITE_NAME } from "../constants";
   import { db } from "../../firebase.js";
   import { collectionData } from "rxfire/firestore";
   import { startWith } from "rxjs/operators";
@@ -11,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Projects - Saeed Ahmed</title>
+  <title>Projects - {WEBSITE_NAME}</title>
 </svelte:head>
 
 <main>
