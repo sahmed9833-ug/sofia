@@ -1,12 +1,19 @@
-<script>
-  import { WEBSITE_NAME } from "../constants";
-  import { db } from "../../firebase.js";
+<script lang="ts">
+  import { db } from "../../firebase";
   import { collectionData } from "rxfire/firestore";
   import { startWith } from "rxjs/operators";
+  import type { Observable } from "rxjs";
+
+  import { WEBSITE_NAME } from "../constants/strings";
+  
+  type Skill = {
+    category: string;
+    entries: string[];
+  }
 
   const skillsCollection = db
     .collection("skills");
-  const skills = collectionData(skillsCollection, "id").pipe(startWith([]));
+  const skills = collectionData(skillsCollection, "id").pipe(startWith([])) as Observable<Skill[]>;
 </script>
 
 <svelte:head>

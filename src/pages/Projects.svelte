@@ -1,14 +1,23 @@
-<script>
+<script lang="ts">
   import MediaQuery from "svelte-media-query";
-  import { WEBSITE_NAME } from "../constants";
-  import { db } from "../../firebase.js";
+  import { db } from "../../firebase";
   import { collectionData } from "rxfire/firestore";
   import { startWith } from "rxjs/operators";
+  import { Observable } from "rxjs";
+
+  import { WEBSITE_NAME } from "../constants/strings";
+  
+  type Project = {
+    title: string;
+    description: string;
+    url: string;
+    image: string;
+  }
 
   const projectsCollection = db
     .collection("projects")
     .orderBy("lastModified", "desc");
-  const projects = collectionData(projectsCollection, "id").pipe(startWith([]));
+  const projects = collectionData(projectsCollection, "id").pipe(startWith([])) as Observable<Project[]>;
 </script>
 
 <svelte:head>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { createEventDispatcher } from "svelte";
   import { Router, link } from "svelte-routing";
   import MediaQuery from "svelte-media-query";

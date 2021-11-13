@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import MediaQuery from "svelte-media-query";
 </script>
 

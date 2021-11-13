@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Router, Route } from "svelte-routing";
   import MediaQuery from "svelte-media-query";
 

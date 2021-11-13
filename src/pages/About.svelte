@@ -1,5 +1,5 @@
-<script>
-  import { WEBSITE_NAME } from "../constants";
+<script lang="ts">
+  import { WEBSITE_NAME } from "../constants/strings";
 </script>
 
 <svelte:head>

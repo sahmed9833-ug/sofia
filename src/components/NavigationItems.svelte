@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import { fly, fade } from "svelte/transition";
   import { Router, links } from "svelte-routing";
   import MediaQuery from "svelte-media-query";
 
-  export let showing;
+  export let showing: boolean;
 
   let navItems = [
     { route: "about", text: "About" },

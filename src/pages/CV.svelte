@@ -1,27 +1,45 @@
-<script>
-  import { WEBSITE_NAME } from "../constants";
-  import { db } from "../../firebase.js";
+<script lang="ts">
+  import type  * as firebase from "firebase/app/";
+  import { db } from "../../firebase";
   import { collectionData } from "rxfire/firestore";
   import { startWith } from "rxjs/operators";
+  import type { Observable } from "rxjs";
 
-  const skillsCollection = db.collection("skills").orderBy("title");
-  const skills = collectionData(skillsCollection, "id").pipe(startWith([]));
+  import { WEBSITE_NAME } from "../constants/strings";
+
+  type Job = {
+    role: string;
+    description: string;
+    company: string;
+    location: string;
+    from: firebase.default.firestore.Timestamp;
+    to: firebase.default.firestore.Timestamp;
+  }
+
+  type School = {
+    course: string;
+    description: string;
+    institution: string;
+    from: firebase.default.firestore.Timestamp;
+    to: firebase.default.firestore.Timestamp;
+    result: string;
+  }
 
   const experienceCollection = db
     .collection("experience")
     .orderBy("from", "desc");
   const experience = collectionData(experienceCollection, "id").pipe(
     startWith([])
-  );
+  ) as Observable<Job[]>;
 
   const educationCollection = db
     .collection("education")
     .orderBy("from", "desc");
   const education = collectionData(educationCollection, "id").pipe(
     startWith([])
-  );
+  ) as Observable<School[]>;
 
-  function getDateFromTimestamp(timestamp) {
+  function getDateFromTimestamp(timestamp: firebase.default.firestore.Timestamp) {
     if (timestamp === null) {
       return "Present";
     }

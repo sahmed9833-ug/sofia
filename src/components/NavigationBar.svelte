@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import MediaQuery from "svelte-media-query";
 
   import Logo from "./Logo.svelte";
@@ -10,21 +10,11 @@
   $: menuButtonClass = showingItems ? "active" : "";
 </script>
 
-<MediaQuery query="(min-width: 1281px)" let:matches>
+<MediaQuery query="(min-width: 481px)" let:matches>
   {#if matches}
     <div class="side">
       <Logo />
-      <NavigationItems />
-      <Footer />
-    </div>
-  {/if}
-</MediaQuery>
-
-<MediaQuery query="(min-width: 481px) and (max-width: 1280px)" let:matches>
-  {#if matches}
-    <div class="side">
-      <Logo />
-      <NavigationItems />
+      <NavigationItems bind:showing={showingItems} />
       <Footer />
     </div>
   {/if}
