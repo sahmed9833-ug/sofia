@@ -93,7 +93,9 @@
   {/each}
 </div>
 
-<style>
+<style lang="scss">
+  @import '../styles/colours.scss';
+
   h2,
   h3 {
     margin-top: 10px;
@@ -104,7 +106,7 @@
     margin-bottom: 0px;
   }
   span {
-    color: rgba(90, 50, 0, 0.6);
+    color: $font-secondary;
   }
   hr {
     margin-top: 20px;

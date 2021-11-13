@@ -11,5 +11,5 @@
   <p>...</p>
 </main>
 
-<style>
+<style lang="scss">
 </style>

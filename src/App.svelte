@@ -57,7 +57,7 @@
   </MediaQuery>
 </Router>
 
-<style>
+<style lang="scss">
   main {
     position: relative;
     min-height: 100%;

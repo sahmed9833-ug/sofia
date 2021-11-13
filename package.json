@@ -28,6 +28,7 @@
     "firebase": "^8.2.1",
     "rxfire": "^4.0.0",
     "rxjs": "^6.6.3",
+    "sass": "^1.43.4",
     "sirv-cli": "^1.0.0",
     "svelte-media-query": "^1.0.0",
     "svelte-routing": "^1.4.2"

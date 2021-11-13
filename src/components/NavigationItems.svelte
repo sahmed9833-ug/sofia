@@ -52,7 +52,9 @@
   {/if}
 </MediaQuery>
 
-<style>
+<style lang="scss">
+  @import '../styles/colours.scss';
+
   ul {
     width: 100%;
     padding: 0;
@@ -61,7 +63,7 @@
   ul.mobile {
     margin: 0;
     position: fixed;
-    background-color: bisque;
+    background-color: $background;
     z-index: 98;
   }
   li {
@@ -72,7 +74,7 @@
     width: 100%;
     height: 60px;
     margin: 0;
-    border-bottom: 1px solid rgba(90, 50, 0, 0.3);
+    border-bottom: 1px solid $background-secondary;
   }
   hr {
     width: 35%;
@@ -93,8 +95,8 @@
   }
   a.mobile:active,
   a.mobile:hover {
-    background-color: rgb(184, 149, 107);
-    color: bisque;
+    background-color: $font-primary;
+    color: $background;
     text-decoration: none;
   }
 

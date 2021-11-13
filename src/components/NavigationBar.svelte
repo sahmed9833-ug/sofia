@@ -33,23 +33,25 @@
   {/if}
 </MediaQuery>
 
-<style>
+<style lang="scss">
+  @import '../styles/colours.scss';
+
   div {
     position: fixed;
-    background-color: burlywood;
+    background-color: $background-secondary;
   }
   div.side {
     width: 25%;
     height: 100%;
     top: 0;
-    background-color: burlywood;
+    background-color: $background-secondary;
   }
   div.top {
     position: fixed;
     width: 100%;
     height: 75px;
     top: 0;
-    border-bottom: 3px solid rgba(90, 50, 0, 0.8);
+    border-bottom: 3px solid $font-primary;
     z-index: 99;
   }
   button {
@@ -58,14 +60,14 @@
     margin-top: 13px;
     margin-right: 13px;
     float: right;
-    background-color: bisque;
-    color: rgb(90, 50, 0);
+    background-color: $background;
+    color: $font-primary;
     font-weight: 700;
-    border: 3px solid rgba(90, 50, 0, 0.8);
+    border: 3px solid $font-primary;
   }
   button:active,
   button.active {
-    background-color: rgb(184, 149, 107);
-    color: rgb(90, 50, 0);
+    background-color: $background-secondary;
+    color: $font-primary;
   }
 </style>

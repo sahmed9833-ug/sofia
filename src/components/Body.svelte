@@ -26,7 +26,7 @@
   {/if}
 </MediaQuery>
 
-<style>
+<style lang="scss">
   div {
     margin: 0 auto;
     padding-top: 100px;

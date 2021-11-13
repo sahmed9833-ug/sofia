@@ -3,7 +3,7 @@
   import { db } from "../../firebase";
   import { collectionData } from "rxfire/firestore";
   import { startWith } from "rxjs/operators";
-  import { Observable } from "rxjs";
+  import type { Observable } from "rxjs";
 
   import { WEBSITE_NAME } from "../constants/strings";
   
@@ -66,7 +66,9 @@
   </MediaQuery>
 </main>
 
-<style>
+<style lang="scss">
+  @import '../styles/colours.scss';
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -79,8 +81,8 @@
     vertical-align: top;
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: burlywood;
-    border: 3px solid rgb(90, 50, 0);
+    background-color: $background;
+    border: 3px solid $font-primary;
     transition: 0.2s ease-out;
   }
 
@@ -110,7 +112,7 @@
     width: 100%;
     height: 30%;
     padding-top: 10px;
-    border-top: 1px solid rgb(90, 50, 0);
+    border-top: 1px solid $font-primary;
   }
   p {
     word-wrap: break-word;

@@ -1,5 +1,6 @@
 <script lang="ts">
   import MediaQuery from "svelte-media-query";
+  import { WEBSITE_NAME } from "../constants/strings";
 </script>
 
 <MediaQuery query="(min-width: 481px) and (min-height: 450px)" let:matches>
@@ -11,7 +12,7 @@
         <a href="https://www.linkedin.com/in/saeed-ahmed-849965150/">LinkedIn</a
         >
       </p>
-      <p class="notes">Sofia Ahmed &#169; 2021</p>
+      <p class="notes">{WEBSITE_NAME} &#169; 2021</p>
     </div>
   {/if}
 </MediaQuery>
@@ -25,12 +26,14 @@
         <a href="https://www.linkedin.com/in/saeed-ahmed-849965150/">LinkedIn</a
         >
       </p>
-      <p class="notes">Saeed Ahmed &#169; 2021</p>
+      <p class="notes">{WEBSITE_NAME} &#169; 2021</p>
     </div>
   {/if}
 </MediaQuery>
 
-<style>
+<style lang="scss">
+  @import '../styles/colours';
+
   div {
     position: absolute;
     width: 100%;
@@ -39,17 +42,17 @@
   }
   div.mobile {
     bottom: auto;
-    background-color: burlywood;
+    background-color: $background-secondary;
   }
   p {
     text-align: center;
     font-family: "Martel", serif;
     font-size: small;
-    color: rgb(90, 50, 0);
+    color: $font-primary;
   }
   a {
     font-weight: unset;
-    color: rgb(90, 50, 0);
+    color: $font-primary;
   }
   p.notes {
     font-size: x-small;

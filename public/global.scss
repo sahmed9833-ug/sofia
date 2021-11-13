@@ -1,17 +1,20 @@
+@import '../src/styles//colours.scss';
+
 html,
 body {
   width: 100%;
-  background-color: #c2b1d6;
+  background-color: $background;
 }
 
 @media only screen and (max-width: 480px) {
   html,
-body {
+  body {
     height: calc(100% - 75px);
   }
 }
+
 body {
-  color: #272838;
+  color: $font-primary;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -21,7 +24,7 @@ h1,
 h2,
 h3 {
   font-family: "Martel", serif;
-  color: #272838;
+  color: $font-primary;
 }
 
 h3 {
@@ -29,13 +32,13 @@ h3 {
 }
 
 hr {
-  border-top: 1px solid #5D536B;
+  border-top: 1px solid $font-secondary;
   border-bottom: none;
 }
 
 a {
   text-decoration: none;
-  color: #272838;
+  color: $font-primary;
   font-weight: bold;
 }
 
@@ -82,5 +85,3 @@ button:not(:disabled):active {
 button:focus {
   border-color: #666;
 }
-
-/*# sourceMappingURL=global.css.map */

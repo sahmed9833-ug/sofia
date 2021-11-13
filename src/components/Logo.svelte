@@ -32,7 +32,7 @@
   </MediaQuery>
 </Router>
 
-<style>
+<style lang="scss">
   div {
     background-image: url("https://i.imgur.com/pDLkY1x.png");
     background-size: contain;
