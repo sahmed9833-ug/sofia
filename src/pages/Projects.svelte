@@ -100,6 +100,8 @@
   a {
     text-decoration: none;
     font-weight: unset;
+    display: inline-block;
+    min-height: inherit;
   }
 
   img {

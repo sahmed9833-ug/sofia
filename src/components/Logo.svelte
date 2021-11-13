@@ -33,13 +33,17 @@
 </Router>
 
 <style lang="scss">
+  @import '../styles/colours.scss';
+
   div {
-    background-image: url("https://i.imgur.com/pDLkY1x.png");
+    background-image: url("https://i.imgur.com/XAfFuD3.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
     margin-top: 25px;
+    border-radius: 50%;
+    border: 2px solid $font-primary;
     transition: 0.2s ease-out;
   }
   div.desktop {
