@@ -36,19 +36,21 @@
   @import '../styles/colours.scss';
 
   div {
-    background-image: url("https://i.imgur.com/XAfFuD3.jpg");
+    background-image: url("https://i.imgur.com/FOLAmsc.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
     margin-top: 25px;
-    border-radius: 50%;
-    border: 2px solid $font-primary;
     transition: 0.2s ease-out;
+    -webkit-filter: drop-shadow(1px 1px 0 $font-primary)
+                  drop-shadow(-1px -1px 0 $font-primary);
+    filter: drop-shadow(1px 1px 0 $font-primary) 
+            drop-shadow(-1px -1px 0 $font-primary);
   }
   div.desktop {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
   }
   div.tablet {
     height: 150px;
