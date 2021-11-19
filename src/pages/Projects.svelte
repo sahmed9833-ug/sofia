@@ -32,7 +32,7 @@
       <ul>
         {#each $projects as project}
           <li>
-            <a href={project.url}>
+            <a href={project.url} target="_blank">
               <img src={project.image} alt={project.title} />
               <div class="text">
                 <p><strong>{project.title}</strong></p>

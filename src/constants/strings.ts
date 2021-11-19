@@ -1,1 +1,1 @@
-export const WEBSITE_NAME = 'Sofia';
+export const WEBSITE_NAME = 'sofia.bio';

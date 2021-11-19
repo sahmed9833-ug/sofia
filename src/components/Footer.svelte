@@ -1,15 +1,18 @@
 <script lang="ts">
   import MediaQuery from "svelte-media-query";
   import { WEBSITE_NAME } from "../constants/strings";
+
+  const gitHubUrl = "https://github.com/sahmed9833-ug";
+  const linkedInUrl = "https://www.linkedin.com/in/sofia-ahmed-849965150/";
 </script>
 
 <MediaQuery query="(min-width: 481px) and (min-height: 450px)" let:matches>
   {#if matches}
     <div>
       <p>
-        <a href="https://github.com/sahmed9833-ug">GitHub</a>
+        <a href="{gitHubUrl}" target="_blank">GitHub</a>
         |
-        <a href="https://www.linkedin.com/in/saeed-ahmed-849965150/">LinkedIn</a
+        <a href="{linkedInUrl}" target="_blank">LinkedIn</a
         >
       </p>
       <p class="notes">{WEBSITE_NAME} &#169; 2021</p>
@@ -21,9 +24,9 @@
   {#if matches}
     <div class="mobile">
       <p>
-        <a href="https://github.com/sahmed9833-ug">GitHub</a>
+        <a href="{gitHubUrl}" target="_blank">GitHub</a>
         |
-        <a href="https://www.linkedin.com/in/saeed-ahmed-849965150/">LinkedIn</a
+        <a href="{linkedInUrl}" target="_blank">LinkedIn</a
         >
       </p>
       <p class="notes">{WEBSITE_NAME} &#169; 2021</p>
