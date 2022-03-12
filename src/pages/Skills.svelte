@@ -22,6 +22,7 @@
 
 <main>
   <h1>Skills</h1>
+  <hr />
   {#each $skills as skill}
     <h2>{skill.category}</h2>
     <ul>
