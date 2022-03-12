@@ -4,6 +4,9 @@
 
   const gitHubUrl = "https://github.com/sahmed9833-ug";
   const linkedInUrl = "https://www.linkedin.com/in/sofia-ahmed-849965150/";
+  const currentYear = new Date().getFullYear();
+
+  const footerText = `${WEBSITE_NAME} &#169; ${currentYear}`;
 </script>
 
 <MediaQuery query="(min-width: 481px) and (min-height: 450px)" let:matches>
@@ -15,7 +18,7 @@
         <a href="{linkedInUrl}" target="_blank">LinkedIn</a
         >
       </p>
-      <p class="notes">{WEBSITE_NAME} &#169; 2021</p>
+      <p class="notes">{@html footerText}</p>
     </div>
   {/if}
 </MediaQuery>
@@ -29,7 +32,7 @@
         <a href="{linkedInUrl}" target="_blank">LinkedIn</a
         >
       </p>
-      <p class="notes">{WEBSITE_NAME} &#169; 2021</p>
+      <p class="notes">{@html footerText}</p>
     </div>
   {/if}
 </MediaQuery>
