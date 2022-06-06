@@ -15,12 +15,13 @@
 
   export let url = "";
 
-  let pages = [
+  const pages = [
     { path: "/", component: CV },
     { path: "about", component: About },
     { path: "cv", component: CV },
     { path: "skills", component: Skills},
     { path: "projects", component: Projects },
+    { path: "*", component: CV }
   ];
 </script>
 
