@@ -1,5 +1,7 @@
 <script lang="ts">
   import { WEBSITE_NAME } from "../constants/strings";
+  
+  const doggoImageSrc = "https://i.imgur.com/PqdFEJU.png"; 
 </script>
 
 <svelte:head>
@@ -12,7 +14,7 @@
 
 Outside of work I enjoy partaking in many hobbies such as LEGO, video games, painting (though I can’t say I’m very good!), reading, and going for walks with the two wonderful furballs below!<br><br>
 
-<img src=“https://i.imgur.com/PqdFEJU.png” alt="Hannie and Marlow!"/></p>
+<img src={doggoImageSrc} alt="Hannie and Marlow!" width="80%"/></p>
 </main>
 
 <style lang="scss">
