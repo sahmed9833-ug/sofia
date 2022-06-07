@@ -36,7 +36,7 @@
   @import '../styles/colours.scss';
 
   div {
-    background-image: url("https://i.imgur.com/FOLAmsc.png");
+    background-image: url("../images/big-logo.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
