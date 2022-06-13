@@ -22,7 +22,7 @@
   @import '../styles/colours.scss';
 
   img {
-    width: 80%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
